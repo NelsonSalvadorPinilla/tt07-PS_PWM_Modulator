@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This proyect receive duty cycle 1 (1) and duty cycle 2 (d2) through inputs.
+This proyect receive duty cycle 1 (1) and duty cycle 2 (d2) through inputs. 
 
 ## How to test
 
