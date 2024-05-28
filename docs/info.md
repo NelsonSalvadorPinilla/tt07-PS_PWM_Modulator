@@ -13,7 +13,39 @@ The Phase Shifted PWM (PS-PWM) system generates phase-shifted PWM signals used f
 
 ## How to test
 
-To test this project ...
+# 1. Initial Setup
+- **Connect Power Supply:**
+  - Ensure the module is powered correctly.
+- **Clock Signal:**
+  - Connect a function generator to the `clk` input.
+- **Control Signals:**
+  - Connect switches or signal sources for `rst_n`, `CLK_SR`, and `data_SR`.
+- **Inputs:**
+  - Connect `ui_in` and `uio_in` to signal sources like DIP switches or a microcontroller.
+
+# 2. Reset the Module
+- **Procedure:**
+  - Set `rst_n` to low to reset the module.
+  - Observe the module's outputs to confirm they reset.
+  - Set `rst_n` to high to release the reset.
+
+# 3. Shift Data into the Shift Register
+- **Procedure:**
+  - Set `data_SR` to the first bit of your 11-bit data (`1` or `0`).
+  - Pulse `CLK_SR` high, then low to clock in the bit.
+  - Repeat for each bit in your data sequence (e.g., `11'b00011001101`. Sequentially input each bit representing dt[0] to dt[4], SELECTOR_SIGNAL_GENERATOR_1[0], SELECTOR_SIGNAL_GENERATOR_1[1], SELECTOR_SIGNAL_GENERATOR_2[0], SELECTOR_SIGNAL_GENERATOR_2[1], OUTPUT_SELECTOR_EXTERNAL[0], and OUTPUT_SELECTOR_EXTERNAL[1] into the data_SR input. For each bit, you set data_SR to the corresponding value (1 or 0) and toggle CLK_SR high, then low, to clock in the bit. This sequential shifting ensures that each data_out corresponds to the specified comment name within the Shift_Register module.).
+
+# 4. Configure `ui_in` and `uio_in` (example, 20% duty cycle)
+- **Procedure:**
+  - Set `ui_in` to `11010000` to set `d1 = 13` (d1 and d2 are 6 bit length, so 13/64 is about 20%).
+  - Set `uio_in[3:0]` to `1101` to set part of `d2 = 13`.
+
+# 5. Monitor Outputs
+- **Procedure:**
+  - Use an oscilloscope or logic analyzer to check `uo_out` signals.
+  - Verify the PWM signals on `uo_out[0]` (PMOS1), `uo_out[1]` (NMOS2), `uo_out[2]` (PMOS2), `uo_out[3]` (NMOS1), and the clock signal on `uo_out[4]`.
+  - Confirm the PWMs duty cycle matches the expected 20%.
+
 
 ## External hardware
 
