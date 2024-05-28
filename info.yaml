@@ -27,33 +27,33 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "d1[0]"
+  ui[1]: "d1[1]"
+  ui[2]: "d1[2]"
+  ui[3]: "d1[3]"
+  ui[4]: "d1[4]"
+  ui[5]: "d1[5]"
+  ui[6]: "d2[0]"
+  ui[7]: "d2[1]"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
+  uo[0]: "PMOS1"
+  uo[1]: "NMOS2"
+  uo[2]: "PMOS2"
+  uo[3]: "NMOS1"
+  uo[4]: "clk_in"
   uo[5]: ""
   uo[6]: ""
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
+  uio[0]: "d2[2]"
+  uio[1]: "d2[3]"
+  uio[2]: "d2[4]"
+  uio[3]: "d2[5]"
+  uio[4]: "CLK_SR"
+  uio[5]: "Data_SR"
+  uio[6]: "CLK_EXT"
   uio[7]: ""
 
 # Do not change!
