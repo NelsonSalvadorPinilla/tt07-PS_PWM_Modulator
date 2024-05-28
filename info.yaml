@@ -3,7 +3,7 @@ project:
   title:        "Phase Shifted PWM Modulator"      # Project title
   author:       "Nelson Salvador & Francisca Donoso"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Phase-Shifted Pulse Width Modulation (PS-PWM) that generates the switching signals for PMOS and NMOS from a duty cycle (d1 and d2)"      # One line description of what your project does
+  description:  "Phase-Shifted Pulse Width Modulation (PS-PWM) that generates the switching signals for 2 PMOS and 2 NMOS from a duty cycle (d1 and d2)"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     1000       # Clock frequency in Hz (or 0 if not applicable)
 
