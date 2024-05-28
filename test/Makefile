@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = tt_um_PS_PWM.v Comparator.v Dead_Time_Generator.v Shift_Register.v Signal_Generator_0phase.v Signal_Generator_90phase.v Signal_Generator_180phase.v Signal_Generator_270phase.v
 
 ifneq ($(GATES),yes)
 
